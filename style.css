@@ -1,0 +1,322 @@
+/*ブラウザ特有のCSSをリセットする*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit; 
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: auto;
+}
+
+/*ここから個別のスタイルあて*/
+body{
+    color: #333333;
+    font-family: "Yu Gothic", "YuGothic", "Hiragino Kaku Gothic ProN", "Meiryo", "MS PGothic", "ＭＳ Ｐゴシック",;
+    font-weight: 800;
+}
+
+.Header{
+    width: 100%;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.05);
+}
+
+.Header__container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 36px;
+    height: 70px;
+}
+
+.HeaderContainer__logo{
+    align-self: center;
+    height: 18px;
+}
+
+.HeaderContainerLogo__img{
+    display: flex;
+    align-self: center;
+    height: 18px;
+    opacity: 1;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.HeaderContainerLogo__img:hover{
+    opacity: 0.8;
+}
+
+.HeaderNav__list{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: left;
+    list-style: none; 
+    height: 70px;
+    text-align: center;
+}
+
+.HeaderNavList__item{
+    margin-right: 46px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.HeaderNavList__item:last-child{
+    margin: 0;
+    font-size: 12px;
+}
+
+.HeaderNavListItem__link{
+    opacity: 1;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.HeaderNavListItem__link:hover{
+    opacity: 0.8;
+}
+
+.HeaderNavListItem__link>span{
+    display: block;
+}
+
+.HeaderNavListItem__link span:first-child{
+    font-size: 12px;
+    font-family: "Lato", "Sans-serif";
+}
+
+.HeaderNavListItme__btn{
+    display: flex;
+    border: none;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f79318;
+    padding: 0 20px;
+    border-radius: 999px;
+    color: #ffffff;
+    opacity: 1;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.HeaderNavListItme__btn:hover{
+    opacity: 0.8;
+}
+
+.HeaderNav__humburger-menu--sp{
+    display: none;
+}
+
+.Main{
+    overflow: hidden;
+}
+
+.FirstView{
+    position: relative;
+    max-width: 100%;
+    height: 740px;
+}
+
+.FirstView__bgimg{
+    position: absolute;
+    max-width: 100%;
+    z-index: -1;
+}
+
+.FirstView__bgimg--left-rectangle{
+    height: 278px;
+    width: 278px;
+}
+
+.FirstView__bgimg--fill-rectangle{
+    top: 84px;
+    left: -70px;
+}
+
+.FirstView__bgimg--main-visual{
+    width: 100%;
+    max-width: 775px;
+    top: -70px;
+    right: 0;
+}
+
+.FirstView__bgimg--right-rectangle{
+    right: 0;
+    bottom: 71px;
+}
+
+.FirstView__mainimg--whole-visual{
+    display: none;
+}
+
+.FirstView__container{
+    max-width: 1040px;
+    padding-top: 218px;
+    margin:0 auto;
+}
+
+.FirstViewContainer_content{
+    position: relative;
+    max-width: 482px;
+}
+
+.FirstViewContainerContent__title{
+    margin-bottom: 18px;
+    font-size: 42px;
+}
+
+.FirstViewContainerContentTitle__bgimg--badge{
+    position: absolute;
+    top: -104px;
+    right: -149px;
+}   
+
+.FirstViewContainerContent__btn{
+    display: flex;
+    border: none;
+    height: 64px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #f79318;
+    padding: 0 20px;
+    border-radius: 999px;
+    color: #ffffff;
+    margin-bottom: 13px;
+    opacity: 1;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.FirstViewContainerContent__btn:hover{
+    opacity: 0.8;
+}
+
+
+.FirstViewContainerContent__caption{
+    font-size: 11px;
+    font-weight: 400;
+}
+
+@media (max-width: 1080px){
+    .Header{
+        position: fixed;
+        background-color: #ffffff;
+    }
+    
+    .Main{
+        padding-top: 60px;
+    }
+
+    .HeaderNav__list{
+        display: none;
+    }
+
+    .HeaderNav__humburger-menu--sp{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        opacity: 1;
+        transition: opacity 0.2s;
+        cursor: pointer;
+    }
+
+    .HeaderNav__humburger-menu--sp{
+        opacity: 1;
+    }
+
+    .HumburgerMenu__line{
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin-bottom: 7px;
+        background-color: #a2a2a2;
+    }
+
+    .HumburgerMenu__line:last-child{
+        margin-bottom: 0;
+    }
+
+    .FirstViewContainerContentTitle__bgimg--badge{
+        top: -102px;
+        right: -149px;
+    }
+
+    .FirstView__container{
+        max-width: none;
+        padding: 216px 36px 0;
+    }
+}
+
+@media (max-width: 767px){
+    .Header{
+        z-index: 10;
+    }
+
+    .Header__container{
+        justify-content: space-between;
+        margin: 0 16px;
+    }
+
+    .HeaderContainer__logo{
+        height: 14px;
+    }
+
+    .HeaderContainerLogo__img{
+        height: 14px;
+    }
+
+    .HeaderContainerLogo__img:hover{
+        opacity: 1;
+    }
+
+    .Main{
+        padding-top: 52px;
+    }
+
+    .FirstView__bgimg{
+        display: none;
+    }
+
+    .FirstView__mainimg--whole-visual{
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .FirstView__container{
+        padding: 0 16px 0;
+    }
+
+    .FirstViewContainer_content{
+        max-width: 482px;
+    }
+
+    .FirstViewContainerContent__title{
+        position: relative;
+        width: fit-content;
+        margin-bottom: 18px;
+        font-size: 22px;
+    }
+
+    .FirstViewContainerContentTitle__bgimg--badge{
+        height: 102px;
+        width: auto;
+        right: -108px;
+        top: -18px;
+    }
+
+    .FirstViewContainerContent__btn:hover{
+        opacity: 1;
+    }
+}
